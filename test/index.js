@@ -14,10 +14,14 @@ aaBus.answer('test', (info, done) => {
   setTimeout(() => done(3), 3000)
 })
 
-aaBus.askEveryOne('test', ({ data, id }) => {
-  console.log(id, data)
+aaBus.askEveryOne('test', (res) => {
+  console.log(res)
 })
 
-aaBus.askAll('test', ({ data, id }) => {
-  console.log(id, data)
+aaBus.askAll('test', (res) => {
+  console.log(res)
+})
+
+aaBus.askRace('test', (res) => {
+  console.log(res)
 })

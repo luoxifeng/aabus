@@ -61,7 +61,29 @@ module.exports = class AABus {
   }
 
   askRace(id, info, accept) {
-    
+    const type = 'askRace'
+    if (typeof info === 'function') {
+      accept = info
+    }
+    let uuid = -1,
+      acks,
+      length,
+      answer;
+    if (
+      (answer = this.answers[id]) &&
+      (acks = answer.acks) &&
+      (length = acks.length)
+    ) {
+      uuid = ++answer.uuid;
+      let i = 0
+      for (let index = 0; index < length; index++) {
+        acks[index](info, data => {
+          ++i === 1 && accept({ id, uuid, type, data })
+        });
+      }
+    } else {
+      accept({ id, uuid: -1, type });
+    }
   }
 
   // 注册应答
