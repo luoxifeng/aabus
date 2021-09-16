@@ -1,2 +1,4 @@
-# aabus
-event bus, ask answer bus
+# AABus
+ask answer bus,event bus
+
+## Usage
