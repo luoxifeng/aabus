@@ -1,0 +1,22 @@
+{
+  "name": "aabus",
+  "version": "0.0.1",
+  "description": "event bus, ask answer bus",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luoxifeng/aabus.git"
+  },
+  "author": "guoying",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luoxifeng/aabus/issues"
+  },
+  "homepage": "https://github.com/luoxifeng/aabus#readme"
+}
